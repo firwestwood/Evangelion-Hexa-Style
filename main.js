@@ -14,9 +14,9 @@
 
     setTimeout(function () {
         el.warnBox.classList.add('hide');
-    }, 5*1000);
+    }, 5000);
 
-    // enable 3d
+    // Enable 3D effect toggle
     el.enable3dBTN = document.getElementById('enable3d');
     el.body = document.getElementsByTagName('body')[0];
     el.enable3dBTN.addEventListener('click', function () {
