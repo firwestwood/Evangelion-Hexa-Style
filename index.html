@@ -4,8 +4,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Evangelion Hexa Style</title>
-    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Iceland" rel="stylesheet">
+    <style>
+        /* Base Styles */
+        body {
+            background-color: #000;
+            background-image: radial-gradient(circle at center, #900, #000);
+            color: #f00;
+            font-family: 'Iceland', monospace;
+            text-align: center;
+            margin: 0;
+        }
+
+        /* Calculator Styles */
+        .calc__result {
+            position: absolute;
+            top: 1em;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 12em;
+            height: 2em;
+            text-indent: 5px;
+            font-size: 1.5em;
+            color: #FF0;
+            background-color: #000;
+            border: none;
+            outline: none;
+            box-shadow: 0 0 5px 1px #C50;
+        }
+
+        .calc-wrapper {
+            position: absolute;
+            top: 8em;
+            width: 100%;
+        }
+
+        .calc {
+            background-color: #900;
+            box-shadow: 0 0 30px 15px #ff0000, inset 0 0 70px 30px #000;
+            display: inline-block;
+            padding: 20px;
+        }
+
+        /* Digit Styles */
+        .calc__digi {
+            display: inline-block;
+            width: 4em;
+            height: 4em;
+            line-height: 4em;
+            text-align: center;
+            background-color: #000;
+            color: #f00;
+            cursor: pointer;
+            position: relative;
+            font-size: 1.5em;
+            clip-path: polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%);
+            box-shadow: 0 0 15px #f00;
+            margin: 0.3em;
+        }
+
+        .calc__digi:hover {
+            background-color: #f00;
+            color: #000;
+            box-shadow: 0 0 20px 10px #FF0;
+        }
+
+        /* Hexwarn Styles */
+        .hexwarn {
+            background-color: #000;
+            color: #f00;
+            margin: 2em auto;
+            width: 10em;
+            padding: 1em;
+            box-shadow: 0 0 20px 10px #ff0, inset 0 0 20px 10px #990;
+            border: 2px solid #ff0;
+            clip-path: polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%);
+            position: relative;
+        }
+
+        .hexwarn:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(45deg, #ff0 0, #ff0 10px, #000 10px, #000 20px);
+            clip-path: polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%);
+            animation: borderAnimation 2s linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes borderAnimation {
+            from { background-position: 0 0; }
+            to { background-position: 40px 0; }
+        }
+
+        .hexwarn__title {
+            font-size: 3em;
+            margin: 0.5em 0;
+        }
+
+        .hexwarn__subtitle,
+        .hexwarn__subtitle--en {
+            font-size: 1.2em;
+        }
+    </style>
 </head>
 <body>
     <input class="calc__result" type="text" placeholder="code: 239">
@@ -53,9 +157,5 @@
             <div class="hexwarn__subtitle--en">Operator Site Is Wrong</div>
         </div>
     </div>
-    <label class="enable3d-btn" for="enable3d">enable3d
-        <input id="enable3d" type="checkbox">
-    </label>
-    <script src="main.js"></script>
 </body>
 </html>
