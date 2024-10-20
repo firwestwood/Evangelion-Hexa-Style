@@ -1,4 +1,3 @@
-/* Base Styles */
 body {
     background-color: #000;
     background-image: radial-gradient(circle at center, #900, #000);
@@ -8,7 +7,6 @@ body {
     margin: 0;
 }
 
-/* Calculator Styles */
 .calc__result {
     position: absolute;
     top: 1em;
@@ -60,7 +58,6 @@ body {
     box-shadow: 0 0 20px #FF0;
 }
 
-/* Hexwarn Styles */
 .hexwarn {
     background-color: #000;
     color: #f00;
@@ -80,7 +77,6 @@ body {
     font-size: 1.2em;
 }
 
-/* Enable 3D Button */
 .enable3d-btn {
     position: absolute;
     top: 0;
