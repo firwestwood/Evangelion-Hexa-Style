@@ -5,32 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link rel="stylesheet" href="css/style.css">
-   <link href="https://fonts.googleapis.com/css?family=Iceland" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Iceland" rel="stylesheet">
 </head>
 <body>
     <input class="calc__result" type="text" placeholder="code: 239">
     <div class="calc-wrapper">
         <div class="calc">
-            <!-- Render ddd Array -->
-            <script>
-                var ddd = [['x','<','','>','←'],['(','*','+','/',')'],['','6','-','8',''],['5','1','7','3','9'],['0','.','2','=','4']];
-                ddd.forEach(dd => {
-                    document.write('<div class="calc__row">');
-                    dd.forEach(d => {
-                        if(d == '') {
-                            document.write('<span class="calc__digi calc__digi--empty"></span>');
-                        } else {
-                            document.write('<span class="calc__digi">' + d + '</span>');
-                        }
-                    });
-                    document.write('</div>');
-                });
-            </script>
+            <!-- Render digit buttons -->
+            <div class="calc__row">
+                <span class="calc__digi">x</span>
+                <span class="calc__digi"><</span>
+                <span class="calc__digi"></span>
+                <span class="calc__digi">></span>
+                <span class="calc__digi">←</span>
+            </div>
+            <div class="calc__row">
+                <span class="calc__digi">(</span>
+                <span class="calc__digi">*</span>
+                <span class="calc__digi">+</span>
+                <span class="calc__digi">/</span>
+                <span class="calc__digi">)</span>
+            </div>
+            <div class="calc__row">
+                <span class="calc__digi">6</span>
+                <span class="calc__digi">-</span>
+                <span class="calc__digi">8</span>
+                <span class="calc__digi"></span>
+            </div>
+            <div class="calc__row">
+                <span class="calc__digi">5</span>
+                <span class="calc__digi">1</span>
+                <span class="calc__digi">7</span>
+                <span class="calc__digi">3</span>
+                <span class="calc__digi">9</span>
+            </div>
+            <div class="calc__row">
+                <span class="calc__digi">0</span>
+                <span class="calc__digi">.</span>
+                <span class="calc__digi">2</span>
+                <span class="calc__digi">=</span>
+                <span class="calc__digi">4</span>
+            </div>
         </div>
         <div class="hexwarn">
             <div class="hexwarn__title">否定</div>
             <div class="hexwarn__subtitle">運算符錯置</div>
-            <div class="hexwarn__subtitle--en">operator site is wrong</div>
+            <div class="hexwarn__subtitle--en">Operator Site Is Wrong</div>
         </div>
     </div>
     <label class="enable3d-btn" for="enable3d">enable3d
