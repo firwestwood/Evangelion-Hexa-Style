@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Iceland" rel="stylesheet">
+</head>
+<body>
+    <input class="calc__result" type="text" placeholder="code: 239">
+    <div class="calc-wrapper">
+        <div class="calc">
+            <!-- Render ddd Array -->
+            <script>
+                var ddd = [['x','<','','>','←'],['(','*','+','/',')'],['','6','-','8',''],['5','1','7','3','9'],['0','.','2','=','4']];
+                ddd.forEach(dd => {
+                    document.write('<div class="calc__row">');
+                    dd.forEach(d => {
+                        if(d == '') {
+                            document.write('<span class="calc__digi calc__digi--empty"></span>');
+                        } else {
+                            document.write('<span class="calc__digi">' + d + '</span>');
+                        }
+                    });
+                    document.write('</div>');
+                });
+            </script>
+        </div>
+        <div class="hexwarn">
+            <div class="hexwarn__title">否定</div>
+            <div class="hexwarn__subtitle">運算符錯置</div>
+            <div class="hexwarn__subtitle--en">operator site is wrong</div>
+        </div>
+    </div>
+    <label class="enable3d-btn" for="enable3d">enable3d
+        <input id="enable3d" type="checkbox">
+    </label>
+    <script src="js/main.js"></script>
+</body>
+</html>
