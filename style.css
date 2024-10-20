@@ -1,1 +1,90 @@
-/* Your CSS code here from the original style */
+/* Base Styles */
+body {
+    background-color: #000;
+    background-image: radial-gradient(circle at center, #900, #000);
+    color: #f00;
+    font-family: 'Iceland', monospace;
+    text-align: center;
+    margin: 0;
+}
+
+/* Calculator Styles */
+.calc__result {
+    position: absolute;
+    top: 1em;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12em;
+    height: 2em;
+    text-indent: 5px;
+    font-size: 1.5em;
+    color: #FF0;
+    background-color: #000;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 5px 1px #C50;
+}
+
+.calc-wrapper {
+    position: absolute;
+    top: 8em;
+    width: 100%;
+}
+
+.calc {
+    display: inline-block;
+    padding: 20px;
+    background-color: #900;
+    box-shadow: inset 0 0 70px 30px #000;
+}
+
+/* Digit Styles */
+.calc__digi {
+    display: inline-block;
+    width: 3em;
+    height: 3em;
+    line-height: 3em;
+    margin: 0.2em;
+    text-align: center;
+    background-color: #000;
+    color: #f00;
+    cursor: pointer;
+    position: relative;
+    font-size: 1.5em;
+    box-shadow: 0 0 10px #f00;
+}
+
+.calc__digi:hover {
+    background-color: #f00;
+    color: #000;
+    box-shadow: 0 0 20px #FF0;
+}
+
+/* Hexwarn Styles */
+.hexwarn {
+    background-color: #000;
+    color: #f00;
+    margin: 2em auto;
+    width: 10em;
+    padding: 1em;
+    box-shadow: 0 0 15px 5px #990;
+}
+
+.hexwarn__title {
+    font-size: 3em;
+    margin: 0.5em 0;
+}
+
+.hexwarn__subtitle,
+.hexwarn__subtitle--en {
+    font-size: 1.2em;
+}
+
+/* Enable 3D Button */
+.enable3d-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.5em;
+    background-color: #fff;
+}
